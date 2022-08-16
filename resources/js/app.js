@@ -6,6 +6,10 @@
 
 require('./bootstrap');
 
+//import 'primevue/resources/themes/saga-blue/theme.css'  //theme
+//import 'primevue/resources/primevue.min.css'  //core css
+import 'primeicons/primeicons.css'  //icons
+
 window.Vue = require('vue').default;
 
 /**
@@ -20,15 +24,18 @@ window.Vue = require('vue').default;
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
-Vue.component('login-component', require('./components/Login.vue').default);
 Vue.component('floatlabel-component', require('./components/Floatlabel.vue').default);
+Vue.component('login-component', require('./components/Login.vue').default);
+Vue.component('home-component', require('./components/Home.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
-
+  
 const app = new Vue({
     el: '#app',
 });
+
+

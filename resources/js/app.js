@@ -6,9 +6,9 @@
 
 require('./bootstrap');
 
-import 'primevue/resources/themes/saga-blue/theme.css'  //theme
-import 'primevue/resources/primevue.min.css'  //core css
-import 'primeicons/primeicons.css'  //icons
+//import 'primevue/resources/themes/saga-blue/theme.css'  //theme
+//import 'primevue/resources/primevue.min.css'  //core css
+//import 'primeicons/primeicons.css'  //icons
 
 window.Vue = require('vue').default;
 
@@ -27,6 +27,9 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 Vue.component('floatlabel-component', require('./components/Floatlabel.vue').default);
 Vue.component('login-component', require('./components/Login.vue').default);
 Vue.component('home-component', require('./components/Home.vue').default);
+/* Vue.component('card-component', require('./components/Card.vue').default); */
+Vue.component('input-container-component', require('./components/InputContainer.vue').default);
+Vue.component('banner-component', require('./components/Banner2.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

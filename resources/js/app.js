@@ -1,44 +1,34 @@
-/**
- * First we will load all of this project's JavaScript dependencies which
- * includes Vue and other libraries. It is a great starting point when
- * building robust, powerful web applications using Vue and Laravel.
- */
-
 require('./bootstrap');
 
-//import 'primevue/resources/themes/saga-blue/theme.css'  //theme
-//import 'primevue/resources/primevue.min.css'  //core css
-//import 'primeicons/primeicons.css'  //icons
+import Vue from 'vue'
+import {
+    BootstrapVue,
+    IconsPlugin
+} from 'bootstrap-vue'
+
+// Import Bootstrap and BootstrapVue CSS files (order is important)
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
+
+// Make BootstrapVue available throughout your project
+Vue.use(BootstrapVue)
+// Optionally install the BootstrapVue icon components plugin
+Vue.use(IconsPlugin)
 
 window.Vue = require('vue').default;
-
-/**
- * The following block of code may be used to automatically register your
- * Vue components. It will recursively scan this directory for the Vue
- * components and automatically register them with their "basename".
- *
- * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
- */
 
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
-Vue.component('floatlabel-component', require('./components/Floatlabel.vue').default);
+/* Vue.component('floatlabel-component', require('./components/Floatlabel.vue').default); */
 Vue.component('login-component', require('./components/Login.vue').default);
 Vue.component('home-component', require('./components/Home.vue').default);
 /* Vue.component('card-component', require('./components/Card.vue').default); */
 Vue.component('input-container-component', require('./components/InputContainer.vue').default);
-Vue.component('banner-component', require('./components/Banner2.vue').default);
-
-/**
- * Next, we will create a fresh Vue application instance and attach it to
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
- */
+Vue.component('nav-bar-component', require('./components/NavBarComponent.vue').default);
+Vue.component('side-bar-component', require('./components/SideBarComponent.vue').default);
 
 const app = new Vue({
     el: '#app',
 });
-
-

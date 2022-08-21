@@ -1,33 +1,17 @@
 <template>
-    <!-- <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="card-header">Bem-vindo</div>
-
-                    <div class="card-body">
-                        <p>Apresentar indicadores do sistema</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-
-    <div>
-        <div>
-            <input-container-component titulo="ID" id="inputID" id-help="idHelp" texto-ajuda="Informe o ID da marca">
-                <input type="number" class="form-control" id="inputID" aria-describedby="idHelp" placeholder="ID">
-            </input-container-component>
-
-            <input-container-component titulo="Nome" id="inputNome" id-help="nomeHelp"
-                texto-ajuda="Informe o nome da marca">
-                <input type="text" class="form-control" id="inputNome" aria-describedby="nomeHelp"
-                    placeholder="Nome da marca">
-            </input-container-component>
-        </div>
-    </div>
+  <!-- <div id="app"><navbar-component></navbar-component></div> -->
+  <div id="app">
+    <nav-bar-component></nav-bar-component>
+    <side-bar-component></side-bar-component>
+  </div>
 </template>
 
 <script>
-
+import NavBarComponent from "./NavBarComponent.vue";
+import SideBarComponent from "./SideBarComponent.vue";
+export default {
+  components: {
+    NavBarComponent, SideBarComponent
+  },
+};
 </script>

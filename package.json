@@ -27,6 +27,7 @@
     "dependencies": {
         "bootstrap-vue": "^2.22.0",
         "primeicons": "^5.0.0",
-        "primevue": "^3.16.0"
+        "primevue": "^3.16.0",
+        "vue-router": "4.0.12"
     }
 }
